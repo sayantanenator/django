@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Product List</title>
+  </head>
+  <body>
+    {% if projects %}
+    <table>
+      <thead>
+        <th>Product Title</th>
+        <th>Product Cost</th>
+        <th>Product Owner</th>
+      </thead>
+      {% for project in projects %}
+      <tr>
+        <td>{{project.productTitle}}</td>
+        <td>{{project.productCost}}</td>
+        <td>{{project.productOwner}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    {%else %}
+    <p>No Products Found</p>
+    {%endif%}
+  </body>
+</html>
